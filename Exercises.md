@@ -21,19 +21,59 @@ Main objectives of this week is to introduce the main concepts and prepare pract
 
 ## Exercises:
 _note: just for today ignore the **#todo** inside the code that ask you to write code, we will focus on the understanding and not on producing code._
-1. [~ 5 min ] Concurrency in your machine:
-   1. Make a list of parallel/concurrent programs in your computer. Choose a running program (for example PyCharm) and see how many threads are running by the application. You can check threads' count in your *task manager/activity monitor* (on Windows *task manager click* on the columns name to select columns and add threads if it is not already visible). You can also use in the Linux/MAC shell the command **"top"** (#TH --> total threads/running threads).
-   2. Open an internet browser with several tabs (*Chrome*) of the same domain website. Check how many threads are created per process (the threads are not directly named but they are listed as parts of the single process: they all have the same Process ID, but contains multiple lines). Make a list (at least five) of *functionalities* (tasks) that each thread of execution is responsible to execute.
-   3. Share your list with the teacher.
-2. [~ 30 min ] **MergeSort**: One of the challenges in designing a concurrent program is to recognise potential concurrent tasks.
-    In Week 1, ignore the class named **ConcurrentMergeSort** and its todos.
-    1. Among various sort algorithms one of the well-known ones is named **merge sort** algorithm. Read and understand how this algorithm works. You can use the following resources: [check here](https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/) , or [here, just don't forget to choose right settings](https://visualgo.net/bn/sorting?slide=1).
-    2. **Note**: In week three you will be asked to implement a concurrent version of this algorithm. Therefore, this exercise is crucial to understand and share your ideas. 
-         1. If you checked the visual algorithm displayed from the above links you should have noted that changes the order and rebuild the re-organised data, can you find these 2 methods in the code?
-         2. How can we make it run faster if we had multiple processors available?
-         3. Can you recognise sorting tasks that can be done *simultaneously*?
-    
-    3. Share your answers with the teacher.
+
+### Exercise 1: Concurrency in your machine (~ 5 min)
+
+#### Task 1
+
+> Make a list of parallel/concurrent programs in your computer. Choose a running program (for example PyCharm) and see how many threads are running by the application. You can check threads' count in your *task manager/activity monitor* (on Windows *task manager click* on the columns name to select columns and add threads if it is not already visible). You can also use in the Linux/MAC shell the command **"top"** (#TH --> total threads/running threads).
+      
+1. VS Code (37 threads) 
+2. Arc (63 threads)
+
+#### Task 2
+   
+> Open an internet browser with several tabs (*Chrome*) of the same domain website. Check how many threads are created per process (the threads are not directly named but they are listed as parts of the single process: they all have the same Process ID, but contains multiple lines). Make a list (at least five) of *functionalities* (tasks) that each thread of execution is responsible to execute.
+      
+Each process uses about 3 to 8 threads. The functionalities of these threads could be:
+
+1. Rendering the page
+2. Executing JavaScript
+3. Listening for user events
+4. Handling network requests
+5. Managing resources
+
+#### Task 4
+
+Share your list with the teacher.
+
+### Exercise 2: MergeSort (~30 min)
+
+**MergeSort**: One of the challenges in designing a concurrent program is to recognise potential concurrent tasks.
+
+In Week 1, ignore the class named **ConcurrentMergeSort** and its todos.
+
+#### Task 1
+
+Among various sort algorithms one of the well-known ones is named **merge sort** algorithm. Read and understand how this algorithm works. You can use the following resources: [check here](https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/) , or [here, just don't forget to choose right settings](https://visualgo.net/bn/sorting?slide=1).
+
+#### Task 2
+
+**Note**: In week three you will be asked to implement a concurrent version of this algorithm. Therefore, this exercise is crucial to understand and share your ideas. 
+
+> If you checked the visual algorithm displayed from the above links you should have noted that changes the order and rebuild the re-organised data, can you find these 2 methods in the code?
+
+Partitioning and comparing
+
+> How can we make it run faster if we had multiple processors available?
+
+Partitioning and ordering partitions could be done on multiple processors.
+
+> Can you recognize sorting tasks that can be done *simultaneously*?
+
+Just about everything but merging.
+ 
+> Share your answers with the teacher.
     
 
 
